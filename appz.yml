@@ -17,10 +17,10 @@ deploy:
     - 5601
   
 properties:
-    revision : 35
     KIBANA_HOST_PORT: 5601
     ELASTICSEARCH_URL: http://elasticsearch-8-1exf-8-13:9200
     ELASTICSEARCH_USERNAME: kibana_user
     HOME: /usr/share/kibana
     ELASTICSEARCH_PASSWORD:
       vault: ELASTIC_PASSWORD
+    revision : 36
