@@ -1,0 +1,26 @@
+app:
+    name: Kibana
+    code: KIBANA
+    notify: mpmathew@ecloudcontrol.com
+    
+build:
+    version: 8.13
+    env: DEV
+    build_file: none
+    output_files: output/*.zip
+    image_template: kibana-8.13exf
+
+deploy:
+    context: exf/DEV
+    replicas: 1
+    port:
+    - 5601
+  
+properties:
+    revision : 35
+    KIBANA_HOST_PORT: 5601
+    ELASTICSEARCH_URL: http://elasticsearch-8-1exf-8-13:9200
+    ELASTICSEARCH_USERNAME: kibana_user
+    HOME: /usr/share/kibana
+    ELASTICSEARCH_PASSWORD:
+      vault: ELASTIC_PASSWORD
