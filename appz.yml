@@ -23,4 +23,4 @@ properties:
     HOME: /usr/share/kibana
     ELASTICSEARCH_PASSWORD:
       vault: ELASTIC_PASSWORD
-    revision : 37
+    revision : 38
